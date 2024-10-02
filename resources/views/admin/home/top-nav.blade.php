@@ -15,7 +15,7 @@
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-icon pe-md-0 dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                    <img src="{{ asset('asset/backend/img/avatars/avatar.jpg')}}" class="avatar img-fluid rounded" alt="Jassa">
+                    <img src="{{ asset('backend/img/avatars/avatar.jpg')}}" class="avatar img-fluid rounded" alt="Jassa">
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
                     <a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
@@ -27,7 +27,6 @@
                             Log out
                         </button>
                     </form>
-                    {{-- <a class="dropdown-item" href="#">Log out</a> --}}
                 </div>
             </li>
         </ul>

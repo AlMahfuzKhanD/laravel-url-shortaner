@@ -23,20 +23,20 @@
 						<div class="card">
 							<div class="card-body">
 								<div class="m-sm-4">
-									<form method="POST" action="{{ route('login') }}">
+									<form method="POST" action="{{ route('auth.login') }}">
                                         @csrf
 										<div class="mb-3">
 											<label class="form-label">Email</label>
-											<input class="form-control form-control-lg" type="email" id="" name="email" placeholder="Enter your email">
+											<input class="form-control form-control-lg" type="email" name="email" placeholder="Enter your email">
 										</div>
 										<div class="mb-3">
 											<label class="form-label">Password</label>
 											<input class="form-control form-control-lg" type="password" name="password" placeholder="Enter your password">
-                                            @if (Route::has('password.request'))
+                                            {{-- @if (Route::has('password.request'))
 											<small>
 												<a href="{{ route('password.request') }}">Forgot password?</a>
 											</small>
-                                            @endif
+                                            @endif --}}
 										</div>
 										<div class="text-center mt-3">
 											<button type="submit" class="btn btn-lg btn-primary">Sign in</button>
