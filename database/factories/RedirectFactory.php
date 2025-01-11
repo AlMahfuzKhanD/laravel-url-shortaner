@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Link;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,7 @@ class RedirectFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'link_id' => Link::factory(),
         ];
     }
 }
