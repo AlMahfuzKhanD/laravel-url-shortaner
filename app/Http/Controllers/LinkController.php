@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Link;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class LinkController extends Controller
 {
@@ -37,5 +38,14 @@ class LinkController extends Controller
         return redirect('dashboard');
     }
 
+    public function destroy(Link $link){
+        abort_if(!auth()->user()->is($link->user),403);
+        DB::transaction(function () use($link) {
+            $link->redirects()->delete();
+            $link->delete();
+            
+        });
+        return redirect('dashboard');
+    }
     
 }
